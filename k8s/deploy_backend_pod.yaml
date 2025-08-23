@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ghcr.io/joaolmonteiro/eks_hello_world/hello-world_back:latest
+        image: ghcr.io/joaolmonteiro/eks_hello_world_backend/hello-world_back:latest
         ports:
         - containerPort: 3000
 
