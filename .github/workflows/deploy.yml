@@ -61,6 +61,10 @@ jobs:
       run: |
         kubectl apply -f k8s/backend-service.yaml
 
+    - name: Delete Ingress
+      run: |
+        kubectl delete ingress backend-ingress
+
     - name: Deploy Ingress
       run: |
         kubectl apply -f k8s/backend-ingress.yaml
