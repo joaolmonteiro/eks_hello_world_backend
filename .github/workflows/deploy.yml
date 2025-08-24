@@ -43,19 +43,11 @@ jobs:
 
     - name: Deploy POD to EKS
       run: |
-        kubectl apply -f k8s/deploy_backend_pod.yaml
-
-    - name: Deploy SERVICE to EKS
-      run: |
-        kubectl apply -f k8s/deploy_backend_service.yaml
-
-    - name: Restart Kubernetes Backend Deployment
-      run: |
-        kubectl rollout restart deployment backend --namespace=default
-
-    - name: Deploy POD to EKS
-      run: |
         kubectl apply -f k8s/backend-deployment.yaml
+
+    - name: Deploy Service to EKS
+      run: |
+        kubectl apply -f k8s/backend-service.yaml
 
     - name: Delete Ingress
       run: |
