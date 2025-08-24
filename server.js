@@ -11,6 +11,11 @@ app.post('/api/hello', (req, res) => {
   res.json({ message: `Hello ${name}` });
 });
 
+app.get('/api/hello', (req, res) => {
+  const { name } = req.body;
+  res.json({ message: `Hello ${name}` });
+});
+
 app.get('/', (req, res) => {
   res.send('Backend is alive!');
 });

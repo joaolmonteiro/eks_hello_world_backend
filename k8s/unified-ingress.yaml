@@ -6,8 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: a18141353efd64942ba0091266a04bf5-989381253.eu-west-1.elb.amazonaws.com
-    http:
+  -  http:
       paths:
       - path: /api/hello
         pathType: ImplementationSpecific
