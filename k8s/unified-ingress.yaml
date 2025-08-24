@@ -17,7 +17,7 @@ spec:
             port:
               number: 3000
       - path: /send-name.html
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: frontend-service
