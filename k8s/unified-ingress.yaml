@@ -3,23 +3,21 @@ kind: Ingress
 metadata:
   name: unified-ingress
   namespace: default
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
   - host: a18141353efd64942ba0091266a04bf5-989381253.eu-west-1.elb.amazonaws.com
     http:
       paths:
-      - path: /api(/|$)(.*)
+      - path: /api/hello
         pathType: ImplementationSpecific
         backend:
           service:
             name: backend-service
             port:
-              number: 80
-      - path: /(.*)
-        pathType: ImplementationSpecific
+              number: 3000
+      - path: /send-name.html
+        pathType: Prefix
         backend:
           service:
             name: frontend-service

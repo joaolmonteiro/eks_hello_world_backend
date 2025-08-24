@@ -6,7 +6,7 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
-app.post('/hello', (req, res) => {
+app.post('/api/hello', (req, res) => {
   const { name } = req.body;
   res.json({ message: `Hello ${name}` });
 });
