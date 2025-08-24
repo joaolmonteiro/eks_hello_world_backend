@@ -15,10 +15,4 @@ spec:
             name: backend-service
             port:
               number: 3000
-      - path: /send-name.html
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: frontend-service
-            port:
-              number: 80
+
