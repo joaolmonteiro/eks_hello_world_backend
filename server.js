@@ -11,6 +11,10 @@ app.post('/api/hello', (req, res) => {
   res.json({ message: `Hello ${name}` });
 });
 
+app.get('/', (req, res) => {
+  res.send('Backend is alive!');
+});
+
 app.listen(port, () => {
   console.log(`Backend running on port ${port}`);
 });
