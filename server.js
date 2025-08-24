@@ -8,12 +8,12 @@ app.use(express.json());
 
 app.post('/api/hello', (req, res) => {
   const { name } = req.body;
-  res.json({ message: `Hello ${name}` });
+  res.json({ message: `HelloX ${name}` });
 });
 
 app.get('/api/hello', (req, res) => {
   const { name } = req.body;
-  res.json({ message: `Hello ${name}` });
+  res.json({ message: `HelloY ${name}` });
 });
 
 app.get('/', (req, res) => {
