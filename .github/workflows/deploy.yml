@@ -51,11 +51,11 @@ jobs:
 
     - name: Delete Ingress
       run: |
-        kubectl delete ingress unified-ingress
+        kubectl delete ingress backend-ingress
 
     - name: Deploy Ingress
       run: |
-        kubectl apply -f k8s/unified-ingress.yaml
+        kubectl apply -f k8s/backend-ingress.yaml
 
     - name: Restart Kubernetes Backend Deployment
       run: |

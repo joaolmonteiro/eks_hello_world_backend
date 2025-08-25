@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: unified-ingress
+  name: backend-ingress
   namespace: default
 spec:
   ingressClassName: nginx
@@ -9,18 +9,11 @@ spec:
   -  http:
       paths:
       - path: /hello
-        pathType: ImplementationSpecific
+        pathType: Prefix
         backend:
           service:
             name: backend-service
             port:
               number: 3000
-      - path: /send_name.html
-        pathType: Prefix
-        backend:
-          service:
-            name: frontend-service
-            port:
-              number: 80
 
 
