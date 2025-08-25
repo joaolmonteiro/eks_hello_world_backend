@@ -6,12 +6,12 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
-app.post('/api/hello', (req, res) => {
+app.post('/hello', (req, res) => {
   const { name } = req.body;
   res.json({ message: `HelloX ${name}` });
 });
 
-app.get('/api/hello', (req, res) => {
+app.get('/hello', (req, res) => {
   const { name } = req.body;
   res.json({ message: `HelloY ${name}` });
 });
