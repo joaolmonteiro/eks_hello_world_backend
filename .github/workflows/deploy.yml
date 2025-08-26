@@ -49,7 +49,4 @@ jobs:
       run: |
         kubectl apply -f k8s/backend-service.yaml
 
-    - name: Restart Kubernetes Backend Deployment
-      run: |
-        kubectl rollout restart deployment backend --namespace=default
 
