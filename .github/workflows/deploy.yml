@@ -39,7 +39,7 @@ jobs:
 
     - name: Update kubeconfig
       run: |
-        aws eks update-kubeconfig --name education-eks-EmfcX93A --region eu-west-1
+        aws eks update-kubeconfig --name education-eks-VxAaQBxE --region eu-west-1
 
     - name: Deploy POD to EKS
       run: |
@@ -48,14 +48,6 @@ jobs:
     - name: Deploy Service to EKS
       run: |
         kubectl apply -f k8s/backend-service.yaml
-
-    - name: Delete Ingress
-      run: |
-        kubectl delete ingress backend-ingress
-
-    - name: Deploy Ingress
-      run: |
-        kubectl apply -f k8s/backend-ingress.yaml
 
     - name: Restart Kubernetes Backend Deployment
       run: |
