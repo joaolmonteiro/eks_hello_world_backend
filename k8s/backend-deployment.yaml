@@ -2,15 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend
+  namespace: hello-world-preprod
+  labels:
+    environment: preprod
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: backend
+      environment: preprod
   template:
     metadata:
       labels:
         app: backend
+        environment: preprod
     spec:
       containers:
       - name: backend
